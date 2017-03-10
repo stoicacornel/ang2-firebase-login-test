@@ -1,0 +1,32 @@
+<div class="page-content profile-container" style="height: 15vh">
+    <div class="columns" style="margin: 0!important;">
+        <div class="accordion">
+            <input id="accord" type="checkbox">
+            <label for="accord" class="btn visible-xs-inline-block" style="position: absolute; right: 20px; top: 10px; z-index: 1">
+                <i class="fa fa-bars"></i>
+            </label>
+
+            <div class="menu-dropdown ac-small visible-xs-inline-block" role="navigation" style="width: 100%;">
+                <nav class="menu text-center col-xs-12" style="padding: 0 !important">
+                    <h3 class="menu-heading text-center" style="height: 54px; font-size: 17px; line-height: 40px;">Menu</h3>
+
+                    <div class="inline-nav-item col-xs-3" [routerLink]="['']" [class.selected]="route == ''" (click)="route = ''">Home</div>
+                    <div class="inline-nav-item col-xs-3" [routerLink]="['/clients']" [class.selected]="route == 'clients'" (click)="route = 'clients'">Clients</div>
+                    <div class="inline-nav-item col-xs-3" [routerLink]="['/client']" [class.selected]="route == 'client'" (click)="route = 'client'">Client</div>
+                    <div class="inline-nav-item col-xs-3" [routerLink]="['/add-client']" [class.selected]="route == 'add-client'" (click)="route = 'add-client'">Add-client</div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-3 hidden-xs" role="navigation">
+    <nav class="menu text-center" style="display: inline-block; width: 100%">
+        <h3 class="menu-heading" style="font-size: 17px;">Menu</h3>
+
+        <div class="menu-item" [routerLink]="['']" [class.selected]="route == ''" (click)="route = ''">Home</div>
+        <div class="menu-item" [routerLink]="['/clients']" [class.selected]="route == 'clients'" (click)="route = 'clients'">Clients</div>
+        <div class="menu-item" [routerLink]="['/client']" [class.selected]="route == 'client'" (click)="route = 'client'">Client</div>
+        <div class="menu-item" [routerLink]="['/add-client']" [class.selected]="route == 'add-client'" (click)="route = 'add-client'">Add-client</div>
+    </nav>
+</div>

@@ -1,0 +1,64 @@
+/*Accordion CSS start*/
+.accordion input + label {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.accordion > input {
+    display: none;
+}
+
+.accordion .menu-dropdown{
+    overflow: hidden;
+    height: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.accordion .menu-dropdown .menu {
+    display: none;
+}
+.accordion input:checked ~ .menu-dropdown {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.accordion input:checked ~ .menu-dropdown.ac-small {
+    height: 235px;
+}
+
+.accordion input:checked ~ .menu-dropdown.ac-small .menu {
+    display: block;
+}
+/*Accordion CSS end*/
+
+.inline-nav-item {
+    position:relative;
+    display:inline-block;
+    padding: 15px;
+}
+
+.inline-nav-item:hover {
+    text-decoration:none;
+    background-color:#f9f9f9
+}
+
+.inline-nav-item.selected {
+    font-weight:bold;
+    color:#222;
+    cursor:default;
+    background-color:#f9f9f9
+}
+
+.menu-item.selected {
+    font-weight:bold;
+    color:#222;
+    cursor:default;
+    background-color:#f9f9f9
+}
