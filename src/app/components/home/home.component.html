@@ -1,3 +1,20 @@
-<div class="menu">
-    <h3 class="menu-heading text-center"> Welcome to Home Page/ User</h3>
+<div *ngIf="(af.auth | async)" class="text-center">
+    <h3 class="menu-heading"> Welcome {{user.auth.displayName}}</h3>
+
+    <button type="button" pButton label="Logout" class="ui-button-info" (click)="logout()" style="border: 0; border-radius: 4px; margin: 20px auto;"></button>
+</div>
+
+<div *ngIf="!(af.auth | async)">
+    <h3 class="menu-heading text-center"> You are not currently logged in</h3>
+
+    <div class="text-center" style="margin: 20px auto;">
+        <div class="col-xs-6">
+            <p>Log in with Google</p>
+            <button type="button" pButton label="Login" class="ui-button-info" (click)="login()" style="border: 0; border-radius: 4px; margin: 20px auto;"></button>
+        </div>
+        <div class="col-xs-6">
+            <p>Log in with Facebook</p>
+            <button type="button" pButton label="Login" class="ui-button-info" (click)="login()" style="border: 0; border-radius: 4px; margin: 20px auto;"></button>
+        </div>
+    </div>
 </div>
