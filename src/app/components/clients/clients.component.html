@@ -1,11 +1,13 @@
-<div class="boxed-group">
-    <h3 class="menu-heading text-center">Clients works!</h3>
+<div *ngIf="clients">
+    <div class="boxed-group">
+        <h3 class="menu-heading text-center">Clients works!</h3>
 
-    <div class="boxed-group-inner">
-        <ul>
-            <li *ngFor="let client of clients">
-                <a [routerLink]="['/client/' + client.$key]" >{{client.name}}</a>
-            </li>
-        </ul>
+        <div class="boxed-group-inner">
+            <ul>
+                <li *ngFor="let client of clients">
+                    <a [routerLink]="['/client/' + client.$key]" >{{client.name}}</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>

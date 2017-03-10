@@ -11,24 +11,23 @@ export class HomeComponent implements OnInit {
     user: any;
 
     constructor(
-        public af: AngularFire,
-        public flashMessages: FlashMessagesService
+        public _af: AngularFire,
+        public _flashMessages: FlashMessagesService
     ) { }
 
     ngOnInit() {
-        this.af.auth.subscribe(user => {
+        this._af.auth.subscribe(user => {
             this.user = user;
-            console.log(this.user);
         })
     }
 
     login() {
-        this.af.auth.login();
+        this._af.auth.login();
     }
 
     logout() {
-        this.af.auth.logout();
-        this.flashMessages.show('You logged out', {cssClass: 'alert-success', timeout: 3000});
+        this._af.auth.logout();
+        this._flashMessages.show('You logged out', {cssClass: 'alert-success', timeout: 3000});
     }
 
 }

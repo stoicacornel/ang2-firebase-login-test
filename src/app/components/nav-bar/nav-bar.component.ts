@@ -10,7 +10,7 @@ export class NavBarComponent implements OnInit {
     route: String = window.location.pathname.split('/')[1];
 
     constructor(
-        private af: AngularFire /*This si for hiding areas that needs authentication*/
+        private _af: AngularFire /*This si for hiding areas that needs authentication*/
     ) { }
 
     ngOnInit() {

@@ -1,10 +1,10 @@
-<div *ngIf="(af.auth | async)" class="text-center">
+<div *ngIf="(_af.auth | async)" class="text-center">
     <h3 class="menu-heading"> Welcome {{user.auth.displayName}}</h3>
 
     <button type="button" pButton label="Logout" class="ui-button-info" (click)="logout()" style="border: 0; border-radius: 4px; margin: 20px auto;"></button>
 </div>
 
-<div *ngIf="!(af.auth | async)">
+<div *ngIf="!(_af.auth | async)">
     <h3 class="menu-heading text-center"> You are not currently logged in</h3>
 
     <div class="text-center" style="margin: 20px auto;">

@@ -1,7 +1,30 @@
 <div class="boxed-group">
-    <h3 class="menu-heading text-center">Add-client works!</h3>
+    <h3 class="menu-heading text-center">Add a Client</h3>
 
     <div class="boxed-group-inner">
+        <a [routerLink]="['/clients']">Back</a>
+        <br />
 
+        <form (submit)="submit()">
+            <div class="form-group">
+                <label>* Fields required</label>
+                <br />
+                <label>Name *</label>
+                <input class="form-control" type="text" name="name" [(ngModel)]="name" required>
+            </div>
+            <div class="form-group">
+                <label>City *</label>
+                <input class="form-control" type="text" name="city" [(ngModel)]="city" required>
+            </div>
+            <div class="form-group">
+                <label>Age *</label>
+                <input class="form-control" type="number" name="age" [(ngModel)]="age" required>
+            </div>
+            <div class="form-group">
+                <label>Occupation *</label>
+                <input class="form-control" type="text" name="occupation" [(ngModel)]="occupation" required>
+            </div>
+            <input type="submit" value="submit" class="btn btn-success">
+        </form>
     </div>
 </div>

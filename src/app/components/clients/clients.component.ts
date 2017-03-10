@@ -13,20 +13,20 @@ export class ClientsComponent implements OnInit {
     user: any;
 
     constructor(
-        private firebaseService: FirebaseService,
-        private af: AngularFire,
+        private _firebaseService: FirebaseService,
+        private _af: AngularFire,
         private _router: Router
     ) { }
 
     ngOnInit() {
-        this.af.auth.subscribe(user => {
+        this._af.auth.subscribe(user => {
             this.user = user;
             if (!this.user) {
                 this._router.navigate(['/']);
             }
         });
 
-        this.firebaseService.getClients().subscribe(clients => {
+        this._firebaseService.getClients().subscribe(clients => {
             console.log(clients);
             this.clients = clients;
         })
