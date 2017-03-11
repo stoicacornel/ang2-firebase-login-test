@@ -68,9 +68,4 @@ export class SigninComponent {
                 this.error = err;
             })
     };
-
-    signout () {
-        this._af.auth.logout();
-        this._flashMessages.show('You logged out', {cssClass: 'alert-success'});
-    }
 }
