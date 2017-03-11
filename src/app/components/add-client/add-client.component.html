@@ -2,8 +2,6 @@
     <h3 class="menu-heading text-center">Add a Client</h3>
 
     <div class="boxed-group-inner">
-        <div class="btn btn-info" [routerLink] = "['/clients']" style="border-radius: 3px;">Back</div>
-        <br />
         <form (submit)="submit()">
             <div class="form-group">
                 <label>* Fields required</label>
@@ -23,7 +21,7 @@
                 <label>Occupation *</label>
                 <input class="form-control" type="text" name="occupation" [(ngModel)]="occupation" required>
             </div>
-            <input type="submit" value="submit" class="btn btn-success">
+            <button pButton type="submit" class="ui-button-success" value="submit" label="Submit"></button>
         </form>
     </div>
 </div>

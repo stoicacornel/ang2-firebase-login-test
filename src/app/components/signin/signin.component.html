@@ -1,0 +1,36 @@
+<div class="user-form">
+    <div class="user-form-header text-center">
+        <h1>Sign in</h1>
+    </div>
+
+    <div id="signup-container">
+        <form #formData="ngForm" (ngSubmit)="login(formData)" novalidate>
+
+            <dl>
+                <dt>Email address</dt>
+                <dd><input type="email" id="email" class="form-control input-contrast" name="email" (ngModel)="email" required/></dd>
+            </dl>
+
+            <dl>
+                <dt>Password</dt>
+                <dd><input type="password" id="password" class="form-control input-contrast" name="password" (ngModel)="password" required/></dd>
+            </dl>
+            <button [disabled]="!formData.valid" type="submit" class="btn btn-primary mt-3" style="width: 100%">Sign in</button>
+
+            <span class="error" *ngIf="error">{{error}}</span>
+        </form>
+
+        <div class="text-center" style="margin: 20px auto;">
+            <div class="col-xs-6">
+                <a (click)="loginGoogle()"><img class="cursor-hand" src="../../../assets/img/google-signin.png"></a>
+            </div>
+            <div class="col-xs-6">
+                <a (click)="loginFb()"><img class="cursor-hand" src="../../../assets/img/facebook-signin.png" style="height: 46px"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="fine-border mt-5" style="display: inline-block">
+        <dd>Don't have an account?  <a [routerLink]="['/signup']">Create one.</a> </dd>
+    </div>
+</div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AngularFire } from "angularfire2";
 import { Router } from "@angular/router";
 
@@ -9,7 +9,7 @@ import { FirebaseService } from '../../common/firebase/firebase.service';
     templateUrl: './add-client.component.html',
     styleUrls: ['./add-client.component.css']
 })
-export class AddClientComponent implements OnInit {
+export class AddClientComponent {
     user: any;
     name: string;
     age: number;
@@ -20,13 +20,12 @@ export class AddClientComponent implements OnInit {
         private _af: AngularFire,
         private _router: Router,
         private _firebaseService: FirebaseService
-    ) { }
-
-    ngOnInit() {
+    ) {
         this._af.auth.subscribe(user => {
-            this.user = user;
-            if (!this.user) {
-                this._router.navigate(['/']);
+            if (user) {
+                this.user = user;
+            } else {
+                this._router.navigate(['/signin']);
             }
         });
     }

@@ -1,8 +1,9 @@
 import { Routes } from '@angular/router';
 
 import { HomeComponent } from './components/home/home.component';
+import { SigninComponent } from './components/signin/signin.component';
+import { SignupComponent } from './components/signup/signup.component';
 import { ClientsComponent } from './components/clients/clients.component';
-import { ClientComponent } from './components/client/client.component';
 import { AddClientComponent } from  './components/add-client/add-client.component';
 
 export const AppRoutes: Routes = [
@@ -11,12 +12,16 @@ export const AppRoutes: Routes = [
         component: HomeComponent
     },
     {
-        path: 'clients',
-        component: ClientsComponent
+        path: 'signin',
+        component: SigninComponent
     },
     {
-        path: 'client/:id',
-        component: ClientComponent
+        path: 'signup',
+        component: SignupComponent
+    },
+    {
+        path: 'clients',
+        component: ClientsComponent
     },
     {
         path: 'add-client',

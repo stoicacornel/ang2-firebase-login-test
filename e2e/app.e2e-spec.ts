@@ -1,6 +1,6 @@
 import { Test1Page } from './app.po';
 
-describe('ang2-firebase-login-test App', () => {
+describe('ang2-firebase-signin-test App', () => {
   let page: Test1Page;
 
   beforeEach(() => {

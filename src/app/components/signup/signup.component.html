@@ -1,0 +1,27 @@
+<div class="user-form">
+    <div class="user-form-header text-center">
+        <h1>Sign up</h1>
+    </div>
+
+    <div id="signup-container">
+        <form #formData="ngForm" (ngSubmit)="create(formData)" novalidate class="form-group">
+
+            <dl class="form-group">
+                <dt>Email address</dt>
+                <dd><input type="email" id="email" class="form-control input-contrast" name="email" (ngModel)="email" required/></dd>
+            </dl>
+
+            <dl class="form-group">
+                <dt>Password</dt>
+                <dd><input type="password" id="password" class="form-control input-contrast" name="password" (ngModel)="password" required/></dd>
+            </dl>
+            <button [disabled]="!formData.valid" type="submit" class="btn btn-primary mt-3" style="width: 100%">Sign up</button>
+
+            <span class="error" *ngIf="error">{{error}}</span>
+        </form>
+    </div>
+
+    <div class="fine-border mt-3">
+        <dd>Already have an account?  <a [routerLink]="['/signin']">Log in.</a> </dd>
+    </div>
+</div>

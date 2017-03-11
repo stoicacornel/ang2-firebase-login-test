@@ -30,7 +30,7 @@
     transition: all 0.5s ease-in-out;
 }
 .accordion input:checked ~ .menu-dropdown.ac-small {
-    height: 235px;
+    height: 120px;
 }
 
 .accordion input:checked ~ .menu-dropdown.ac-small .menu {

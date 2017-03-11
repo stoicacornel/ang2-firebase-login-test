@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AngularFire } from "angularfire2";
 
 @Component({
@@ -6,17 +6,10 @@ import { AngularFire } from "angularfire2";
     templateUrl: './nav-bar.component.html',
     styleUrls: ['./nav-bar.component.css']
 })
-export class NavBarComponent implements OnInit {
+export class NavBarComponent {
     route: String = window.location.pathname.split('/')[1];
 
     constructor(
-        private _af: AngularFire /*This si for hiding areas that needs authentication*/
+        private _af: AngularFire /*Needed for html*/
     ) { }
-
-    ngOnInit() {
-        /*let interval = setInterval(() => {
-            console.log(this.route);
-        }, 1000)*/
-    }
-
 }

@@ -1,10 +1,10 @@
-<div class="profile-container desktop-padding-top">
-    <div class="columns" style="margin: 0!important;">
-        <nav-bar></nav-bar>
+<div class="columns" style="margin: 0!important;">
+    <nav-bar></nav-bar>
 
-        <div class="col-sm-9 mobile-padding-top" style="margin: 0 auto">
-            <flash-messages></flash-messages>
-            <router-outlet></router-outlet>
-        </div>
+    <button *ngIf="(_af.auth | async)" type="button" pButton label="Logout" class="ui-button-info cursor-hand logout-button" (click)="logout()"></button>
+
+    <div class="col-sm-8 desktop-padding-top" style="margin: 0 auto;" [class.no-float]="!(_af.auth | async)">
+        <flash-messages></flash-messages>
+        <router-outlet></router-outlet>
     </div>
 </div>
