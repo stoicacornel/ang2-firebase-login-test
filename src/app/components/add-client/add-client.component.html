@@ -2,9 +2,8 @@
     <h3 class="menu-heading text-center">Add a Client</h3>
 
     <div class="boxed-group-inner">
-        <a [routerLink]="['/clients']">Back</a>
+        <div class="btn btn-info" [routerLink] = "['/clients']" style="border-radius: 3px;">Back</div>
         <br />
-
         <form (submit)="submit()">
             <div class="form-group">
                 <label>* Fields required</label>

@@ -16,8 +16,8 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { ClientComponent } from './components/client/client.component';
 import { AddClientComponent } from './components/add-client/add-client.component';
 import { ClientsComponent } from './components/clients/clients.component';
-import { ButtonModule } from "primeng/components/button/button";
 
+import { ButtonModule } from "primeng/components/button/button";
 
 @NgModule({
     declarations: [

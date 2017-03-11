@@ -9,6 +9,6 @@ export const firebaseConfig = {
 };
 
 export const firebaseAuthConfig = {
-    provider: AuthProviders.Google, //TODO Add facebook auth
+    provider: AuthProviders.Google,
     method: AuthMethods.Popup
 };

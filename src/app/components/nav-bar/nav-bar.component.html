@@ -10,10 +10,9 @@
             <div class="menu-dropdown ac-small visible-xs-inline-block" role="navigation" style="width: 100%;">
                 <nav class="menu text-center col-xs-12" style="padding: 0 !important">
                     <h3 class="menu-heading text-center" style="height: 54px; font-size: 17px; line-height: 40px;">Menu</h3>
-                    <div class="inline-nav-item col-xs-3" [routerLink]="['']" [class.selected]="route == ''" (click)="route = ''">Home</div>
-                    <div *ngIf="(_af.auth |async)" class="inline-nav-item col-xs-3" [routerLink]="['/clients']" [class.selected]="route == 'clients'" (click)="route = 'clients'">Clients</div>
-                    <div *ngIf="(_af.auth |async)" class="inline-nav-item col-xs-3" [routerLink]="['/client']" [class.selected]="route == 'client'" (click)="route = 'client'">Client</div>
-                    <div *ngIf="(_af.auth |async)" class="inline-nav-item col-xs-3" [routerLink]="['/add-client']" [class.selected]="route == 'add-client'" (click)="route = 'add-client'">Add-client</div>
+                    <div class="inline-nav-item col-xs-4 cursor-hand" [routerLink]="['']" [class.selected]="route == ''" (click)="route = ''">Home</div>
+                    <div *ngIf="(_af.auth |async)" class="inline-nav-item col-xs-4 cursor-hand" [routerLink]="['/clients']" [class.selected]="route == 'clients'" (click)="route = 'clients'">Clients</div>
+                    <div *ngIf="(_af.auth |async)" class="inline-nav-item col-xs-4 cursor-hand" [routerLink]="['/add-client']" [class.selected]="route == 'add-client'" (click)="route = 'add-client'">Add-client</div>
                 </nav>
             </div>
         </div>
@@ -24,9 +23,8 @@
     <nav class="menu text-center" style="display: inline-block; width: 100%">
         <h3 class="menu-heading" style="font-size: 17px;">Menu</h3>
 
-        <div class="menu-item" [routerLink]="['']" [class.selected]="route == ''" (click)="route = ''">Home</div>
-        <div *ngIf="(_af.auth |async)" class="menu-item" [routerLink]="['/clients']" [class.selected]="route == 'clients'" (click)="route = 'clients'">Clients</div>
-        <div *ngIf="(_af.auth |async)" class="menu-item" [routerLink]="['/client']" [class.selected]="route == 'client'" (click)="route = 'client'">Client</div>
-        <div *ngIf="(_af.auth |async)" class="menu-item" [routerLink]="['/add-client']" [class.selected]="route == 'add-client'" (click)="route = 'add-client'">Add-client</div>
+        <div class="menu-item cursor-hand" [routerLink]="['']" [class.selected]="route == ''" (click)="route = ''">Home</div>
+        <div *ngIf="(_af.auth |async)" class="menu-item cursor-hand" [routerLink]="['/clients']" [class.selected]="route == 'clients'" (click)="route = 'clients'">Clients</div>
+        <div *ngIf="(_af.auth |async)" class="menu-item cursor-hand" [routerLink]="['/add-client']" [class.selected]="route == 'add-client'" (click)="route = 'add-client'">Add-client</div>
     </nav>
 </div>

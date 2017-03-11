@@ -1,11 +1,10 @@
 <div *ngIf="clients">
     <div class="boxed-group">
         <h3 class="menu-heading text-center">Clients works!</h3>
-
         <div class="boxed-group-inner">
-            <ul>
-                <li *ngFor="let client of clients">
-                    <a [routerLink]="['/client/' + client.$key]" >{{client.name}}</a>
+            <ul class="list-group">
+                <li *ngFor="let client of clients" class="list-group-item cursor-hand" [routerLink]="['/client/' + client.$key]">
+                    <a style="text-decoration: none; color: #666">{{client.name}}</a>
                 </li>
             </ul>
         </div>

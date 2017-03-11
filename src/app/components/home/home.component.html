@@ -1,7 +1,7 @@
 <div *ngIf="(_af.auth | async)" class="text-center">
     <h3 class="menu-heading"> Welcome {{user.auth.displayName}}</h3>
 
-    <button type="button" pButton label="Logout" class="ui-button-info" (click)="logout()" style="border: 0; border-radius: 4px; margin: 20px auto;"></button>
+    <button type="button" pButton label="Logout" class="ui-button-info" (click)="logout()" style="border: 0; border-radius: 4px; margin: 20px auto; padding: 8px 10px;"></button>
 </div>
 
 <div *ngIf="!(_af.auth | async)">
@@ -9,12 +9,10 @@
 
     <div class="text-center" style="margin: 20px auto;">
         <div class="col-xs-6">
-            <p>Log in with Google</p>
-            <button type="button" pButton label="Login" class="ui-button-info" (click)="login()" style="border: 0; border-radius: 4px; margin: 20px auto;"></button>
+            <a (click)="login()"><img class="cursor-hand" src="../../../assets/img/google-signin.png"></a>
         </div>
         <div class="col-xs-6">
-            <p>Log in with Facebook</p>
-            <button type="button" pButton label="Login" class="ui-button-info" (click)="login()" style="border: 0; border-radius: 4px; margin: 20px auto;"></button>
+            <a (click)="loginFb()"><img class="cursor-hand" src="../../../assets/img/facebook-signin.png" style="height: 46px"></a>
         </div>
     </div>
 </div>

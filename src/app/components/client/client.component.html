@@ -1,11 +1,9 @@
 <div *ngIf="client">
-    <a [routerLink] = "['/clients']">Back</a>
-
     <div class="boxed-group">
         <h3 class="menu-heading text-center">Client works!</h3>
-
         <div class="boxed-group-inner">
-            <br>
+            <div class="btn btn-info" [routerLink] = "['/clients']" style="border-radius: 3px;">Back</div>
+            <br />
             <h2 class="page-header">{{client.name}} <small>{{client.city}}</small></h2>
 
             <ul class="list-group">
@@ -13,6 +11,5 @@
                 <li class="list-group-item">Occupation: {{client.occupation}}</li>
             </ul>
         </div>
-        <a class="btn btn-danger" href="#">Delete</a>
     </div>
 </div>

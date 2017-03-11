@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFire } from 'angularfire2';
+
+import { AngularFire, AuthProviders } from 'angularfire2';
 import { FlashMessagesService } from 'angular2-flash-messages';
 
 @Component({
@@ -22,7 +23,13 @@ export class HomeComponent implements OnInit {
     }
 
     login() {
-        this._af.auth.login();
+        this._af.auth.login(); // By default, the AuthProviders is set to Google in firebase.const.ts
+    }
+
+    loginFb() {
+        this._af.auth.login({
+            provider: AuthProviders.Facebook
+        });
     }
 
     logout() {
